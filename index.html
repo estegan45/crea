@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AYUDALIA | Guía para recién llegados a España</title>
+  <meta name="description" content="Guía paso a paso para organizar tus primeros 90 días en España. NIE, cuenta bancaria, certificado digital, Seguridad Social y soporte por WhatsApp." />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1120px;
+      margin: auto;
+    }
+
+    .hero {
+      padding: 40px 0 70px;
+      background: linear-gradient(135deg, #020617 0%, #111827 45%, #1e3a8a 100%);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 45px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #facc15;
+    }
+
+    .nav-button {
+      background: #22c55e;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(250, 204, 21, 0.14);
+      color: #facc15;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: #facc15;
+    }
+
+    .hero-text {
+      font-size: 20px;
+      color: #dbeafe;
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 26px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 800;
+      transition: 0.2s;
+    }
+
+    .btn-primary {
+      background: #22c55e;
+      color: white;
+      box-shadow: 0 12px 30px rgba(34, 197, 94, 0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #16a34a;
+    }
+
+    .btn-secondary {
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .price {
+      margin-top: 18px;
+      color: #e5e7eb;
+      font-size: 16px;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 22px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .white {
+      background: #ffffff;
+      color: #111827;
+    }
+
+    .soft {
+      background: #f8fafc;
+      color: #111827;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 44px);
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .section-subtitle {
+      max-width: 760px;
+      text-align: center;
+      margin: 0 auto 40px;
+      color: #475569;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #475569;
+    }
+
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .check {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      padding: 18px 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .problem {
+      max-width: 850px;
+      margin: auto;
+      background: #0f172a;
+      color: white;
+      border-radius: 24px;
+      padding: 36px;
+    }
+
+    .problem ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .problem li {
+      margin: 12px 0;
+      color: #e5e7eb;
+    }
+
+    .offer {
+      background: linear-gradient(135deg, #16a34a, #15803d);
+      color: white;
+      border-radius: 28px;
+      padding: 42px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+      box-shadow: 0 18px 60px rgba(22, 163, 74, 0.25);
+    }
+
+    .offer h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      margin-bottom: 10px;
+    }
+
+    .offer .big-price {
+      font-size: 58px;
+      font-weight: 900;
+      margin: 18px 0;
+      color: #facc15;
+    }
+
+    .offer-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 28px auto;
+      max-width: 650px;
+      text-align: left;
+    }
+
+    .offer-item {
+      background: rgba(255,255,255,0.13);
+      padding: 14px;
+      border-radius: 12px;
+    }
+
+    .faq {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    details {
+      background: white;
+      color: #111827;
+      padding: 20px;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      border: 1px solid #e5e7eb;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    details p {
+      margin-top: 12px;
+      color: #475569;
+    }
+
+    .final {
+      text-align: center;
+      background: #020617;
+      color: white;
+    }
+
+    .final p {
+      color: #cbd5e1;
+      max-width: 720px;
+      margin: 0 auto 28px;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      background: #020617;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .hero-grid,
+      .cards,
+      .checklist,
+      .offer-list {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        gap: 18px;
+        align-items: flex-start;
+      }
+
+      .nav-button {
+        font-size: 14px;
+        padding: 10px 14px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+    }
+  
+.countdown-bar{
+background:#dc2626;color:white;text-align:center;padding:12px;
+font-weight:800;font-size:18px;
+}
+.countdown{
+font-size:28px;font-weight:900;color:#facc15;margin:10px 0;
+}
+.strike{color:#cbd5e1;text-decoration:line-through;font-size:28px;}
+.fomo{
+background:#fff7ed;border:2px solid #fb923c;padding:25px;border-radius:18px;
+max-width:900px;margin:auto;color:#111827;
+}
+.compare{
+display:grid;grid-template-columns:1fr 1fr;gap:20px;
+}
+.compare div{padding:20px;border-radius:14px;}
+.badside{background:#fee2e2;}
+.goodside{background:#dcfce7;}
+
+
+.whatsapp-float{
+position:fixed;left:20px;bottom:25px;background:#25D366;color:white;
+padding:14px 18px;border-radius:999px;font-weight:800;
+text-decoration:none;z-index:9999;box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.testimonial{background:white;padding:24px;border-radius:16px;border:1px solid #e5e7eb;box-shadow:0 10px 25px rgba(0,0,0,.08);}
+.progress-wrap{max-width:700px;margin:20px auto;text-align:center;}
+.progress-bar{height:18px;background:#e5e7eb;border-radius:999px;overflow:hidden;}
+.progress-fill{height:100%;width:78%;background:#22c55e;}
+.beforeafter{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.before,.after{padding:25px;border-radius:16px;}
+.before{background:#fee2e2;}
+.after{background:#dcfce7;}
+</style>
+</head>
+
+<body>
+<div class="countdown-bar">
+🚨 OFERTA DE LANZAMIENTO (ÚLTIMAS 24 HORAS): 49 € → 15 € | Termina en <span id="timer">47:59:59</span>
+</div>
+
+
+  <header class="hero">
+    <div class="container">
+      <div class="nav">
+        <div class="logo">AYUDA<span>LIA</span></div>
+        <a class="nav-button" href="https://wa.me/34627005425" target="_blank">Hablar por WhatsApp</a>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <div class="badge">Guía paso a paso + soporte por WhatsApp</div>
+          <h1>Llegaste a España. <span class="highlight">¿Y ahora qué?</span></h1>
+          <p class="hero-text">
+            Te mostramos exactamente qué hacer durante tus primeros 90 días para organizar tu llegada, evitar confusión y avanzar con seguridad.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://checkout.wompi.co/l/test_ha6s9Z" target="_blank">Quiero mi guía por 15 €</a>
+            <a class="btn btn-secondary" href="#incluye">Ver qué incluye</a>
+          </div>
+
+          
+<div style="margin-top:20px;">
+<div class="strike">49 €</div>
+<div style="font-size:58px;font-weight:900;color:#facc15;">15 €</div>
+<div class="countdown">⏳ Oferta termina en: <span id="timer2">47:59:59</span></div>
+</div>
+<p class="price">Pago único. Acceso inmediato.</p>
+
+        </div>
+
+        <div>
+          <img class="hero-img" src="ayudalia-portada.png" alt="Portada de AYUDALIA para recién llegados a España">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="white">
+    <div class="container">
+      <h2 class="section-title">La información existe, pero está dispersa</h2>
+      <p class="section-subtitle">
+        Páginas oficiales, foros, vídeos, grupos y opiniones diferentes. AYUDALIA te organiza el camino para que sepas qué hacer primero y qué hacer después.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Evita perder tiempo</h3>
+          <p>No tendrás que buscar en decenas de sitios para entender los trámites básicos.</p>
+        </div>
+        <div class="card">
+          <h3>Orden claro</h3>
+          <p>La guía te muestra una ruta sencilla para tus primeros 90 días en España.</p>
+        </div>
+        <div class="card">
+          <h3>Apoyo por WhatsApp</h3>
+          <p>Recibes acompañamiento para resolver dudas durante tu proceso.</p>
+        </div>
+      
+      </div>
+
+      <div style="text-align:center;margin-top:35px;">
+        <a class="btn btn-primary" href="https://checkout.wompi.co/l/test_ha6s9Z" target="_blank">
+          👉 QUIERO MI GUÍA AHORA POR 15 €
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  
+<section class="white">
+<div class="container">
+<h2 class="section-title">¿Cuánto te cuesta hacerlo solo?</h2>
+<div class="compare">
+<div class="badside">
+<h3>❌ Sin AYUDALIA</h3>
+<p>Horas buscando información contradictoria.</p>
+<p>Errores en trámites y documentos.</p>
+<p>Retrasos innecesarios.</p>
+<p>Gastos en asesorías para preguntas básicas.</p>
+</div>
+<div class="goodside">
+<h3>✅ Con AYUDALIA</h3>
+<p>Ruta clara desde el primer día.</p>
+<p>Checklist paso a paso.</p>
+<p>Enlaces oficiales organizados.</p>
+<p>Soporte por WhatsApp.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container">
+<div class="fomo">
+<h2>🔥 Miles de personas llegan a España sin saber por dónde empezar</h2>
+<p>Cada semana que retrasas tus trámites puede significar más estrés, más tiempo perdido y más incertidumbre.</p>
+<p><strong>Empieza hoy con una hoja de ruta clara.</strong></p>
+</div>
+</div>
+</section>
+
+<section class="soft" id="incluye">
+    <div class="container">
+      <h2 class="section-title">¿Qué aprenderás con AYUDALIA?</h2>
+      <p class="section-subtitle">Una guía práctica para organizar tus trámites importantes al llegar a España.</p>
+
+      <div class="checklist">
+        <div class="check">✅ Obtener tu NIE</div>
+        <div class="check">✅ Abrir una cuenta bancaria</div>
+        <div class="check">✅ Activar tu Seguridad Social</div>
+        <div class="check">✅ Conseguir tu Certificado Digital</div>
+        <div class="check">✅ Acceder a Carpeta Ciudadana</div>
+        <div class="check">✅ Gestionar tus citas previas</div>
+        <div class="check">✅ Canjear tu licencia de conducir si aplica</div>
+        <div class="check">✅ Organizar tus primeros 90 días</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="white">
+    <div class="container">
+      <div class="problem">
+        <h2>Evita los errores que cometen muchos recién llegados</h2>
+        <p>
+          Cuando llegas a España, es normal sentirse perdido. No saber qué trámite hacer primero puede hacerte perder días o semanas.
+        </p>
+        <ul>
+          <li>❌ No saber dónde pedir una cita</li>
+          <li>❌ Confundir plataformas oficiales</li>
+          <li>❌ No tener claro qué documentos preparar</li>
+          <li>❌ Depender de información incompleta o contradictoria</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="container">
+      <div class="offer">
+        <h2>Consigue tu guía hoy</h2>
+        <p>Todo organizado en un solo lugar para que empieces tu nueva vida en España con más claridad.</p>
+
+        <div class="big-price">15 €</div>
+        <p>Pago único. Acceso inmediato.</p>
+
+        <div class="offer-list">
+          <div class="offer-item">📖 Guía paso a paso</div>
+          <div class="offer-item">📋 Checklist de trámites</div>
+          <div class="offer-item">🔗 Enlaces oficiales organizados</div>
+          <div class="offer-item">📱 Soporte por WhatsApp</div>
+        </div>
+
+        <a class="btn btn-primary" href="https://checkout.wompi.co/l/test_ha6s9Z" target="_blank">👉 QUIERO ORGANIZAR MI VIDA EN ESPAÑA HOY</a>
+      </div>
+    </div>
+  </section>
+
+  
+<section class="white">
+<div class="container">
+<h2 class="section-title">⭐⭐⭐⭐⭐ Lo que opinan quienes ya la utilizaron</h2>
+<div class="testimonials">
+<div class="testimonial"><strong>⭐⭐⭐⭐⭐</strong><p>Me ahorró muchísimo tiempo buscando información.</p></div>
+<div class="testimonial"><strong>⭐⭐⭐⭐⭐</strong><p>Ahora entendí exactamente qué hacer primero.</p></div>
+<div class="testimonial"><strong>⭐⭐⭐⭐⭐</strong><p>Todo organizado y fácil de seguir.</p></div>
+</div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container">
+<h2 class="section-title">Antes vs Después de AYUDALIA</h2>
+<div class="beforeafter">
+<div class="before">
+<h3>❌ Antes</h3>
+<p>Confusión, pérdida de tiempo, información dispersa y estrés.</p>
+</div>
+<div class="after">
+<h3>✅ Después</h3>
+<p>Claridad, organización y una ruta paso a paso para avanzar.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="white">
+<div class="container">
+<div class="progress-wrap">
+<h2>🔥 Oferta de lanzamiento activa</h2>
+<p>La promoción está a punto de finalizar.</p>
+<div class="progress-bar"><div class="progress-fill"></div></div>
+<p><strong>78% de la promoción completada</strong></p>
+</div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container">
+<div class="fomo">
+<h2>⚠️ Lo que pasa si no actúas hoy</h2>
+<p>Seguirás buscando información en decenas de sitios, perdiendo tiempo y retrasando trámites importantes.</p>
+<p><strong>Por solo 15 € puedes empezar hoy mismo con una guía clara y organizada.</strong></p>
+<a class="btn btn-primary" href="https://checkout.wompi.co/l/test_ha6s9Z" target="_blank">👉 QUIERO EMPEZAR AHORA</a>
+</div>
+</div>
+</section>
+
+<section class="white">
+    <div class="container">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+
+      <div class="faq">
+        <details>
+          <summary>¿La guía sirve para cualquier nacionalidad?</summary>
+          <p>Sí. Está pensada para personas que acaban de llegar a España y quieren organizar sus primeros trámites.</p>
+        </details>
+
+        <details>
+          <summary>¿Cuándo recibiré la guía?</summary>
+          <p>Después de completar el pago, recibirás la guía y las instrucciones de acceso.</p>
+        </details>
+
+        <details>
+          <summary>¿Incluye soporte?</summary>
+          <p>Sí. Incluye soporte por WhatsApp para ayudarte con dudas relacionadas con la guía.</p>
+        </details>
+
+        <details>
+          <summary>¿Necesito conocimientos previos?</summary>
+          <p>No. Todo está explicado en lenguaje sencillo y paso a paso.</p>
+        </details>
+
+        <details>
+          <summary>¿Es una asesoría legal?</summary>
+          <p>No. AYUDALIA es una guía informativa y de organización. Para casos legales específicos, consulta con un profesional autorizado.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="container">
+      <h2 class="section-title">Tu camino en España empieza con una buena organización</h2>
+      <p>
+        Deja de perder tiempo buscando información en mil lugares. AYUDALIA te da una ruta clara para tus primeros 90 días.
+      </p>
+      <a class="btn btn-primary" href="https://checkout.wompi.co/l/test_ha6s9Z" target="_blank">Quiero mi guía por 15 €</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 AYUDALIA. Tu camino, nuestra guía.
+  </footer>
+
+
+<script>
+const endDate = new Date();
+endDate.setHours(endDate.getHours()+24);
+function updateCountdown(){
+ const now = new Date();
+ const diff = endDate-now;
+ const h=Math.floor(diff/(1000*60*60));
+ const m=Math.floor((diff/(1000*60))%60);
+ const s=Math.floor((diff/1000)%60);
+ const txt=`${h}h ${m}m ${s}s`;
+ const t1=document.getElementById('timer');
+ const t2=document.getElementById('timer2');
+ if(t1) t1.textContent=txt;
+ if(t2) t2.textContent=txt;
+}
+setInterval(updateCountdown,1000);
+updateCountdown();
+</script>
+
+<a href="#" style="position:fixed;bottom:25px;right:25px;background:#facc15;
+color:#111827;width:55px;height:55px;border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+font-size:28px;font-weight:bold;text-decoration:none;
+box-shadow:0 10px 25px rgba(0,0,0,.25);z-index:9999;">
+↑
+</a>
+
+
+<a class="whatsapp-float" href="https://wa.me/34627005425" target="_blank">
+💬 WhatsApp
+</a>
+
+</body>
+</html>
